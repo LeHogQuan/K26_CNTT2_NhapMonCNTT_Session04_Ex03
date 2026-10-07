@@ -1,0 +1,30 @@
+Phần 1: Mã nguồn
+mkdir .\Farm-Manager\code\app
+
+mkdir .\Farm-Manager\database\db
+
+mkdir .\Farm-Manager\logs\guides
+
+New-Item .\Farm-Manager\code\app\main.py -ItemType File
+
+New-Item .\Farm-Manager\code\app\models.py -ItemType File
+
+New-Item .\Farm-Manager\code\app\utils.py -ItemType File
+
+Copy-Item .\Farm-Manager\logs -Destination .\Farm-Manager\logs-backup -Recurse -Force
+
+mkdir: tạo thư mục.
+
+New-Item -ItemType File: tạo file rỗng.
+
+Copy-Item: sao chép thư mục.
+
+-Recurse: sao chép cả thư mục con và file bên trong.
+
+-Force: cho phép ghi đè/xử lý các mục đã tồn tại.
+
+Phần 2:
+
+ls .\Farm-Manager
+
+.\ là đường dẫn tương đối, giúp bài chạy linh hoạt dựa trên thư mục hiện tại, không phụ thuộc ổ đĩa hoặc đường dẫn cụ thể như C:\....
